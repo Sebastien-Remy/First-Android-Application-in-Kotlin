@@ -37,6 +37,19 @@ class MainActivity : AppCompatActivity() {
 
     fun randomMe(view: View) {
         val randomIntent = Intent(this, SecondActivity::class.java)
+
+        // Get the text view
+        val showCountTextView = findViewById<TextView>(R.id.textView)
+
+        // Get the value of text view
+        val countString = showCountTextView.text.toString()
+
+        // Convert value to a number and increment it
+        var count: Int = Integer.parseInt(countString)
+
+        // Add count to the extra for the Intent
+        randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
+
         startActivity(randomIntent)
     }
 

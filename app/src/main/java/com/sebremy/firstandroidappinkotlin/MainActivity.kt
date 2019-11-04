@@ -1,5 +1,6 @@
 package com.sebremy.firstandroidappinkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
 
         // Display the new value on the text view
         showCountTextView.text = count.toString()
+    }
+
+    fun randomMe(view: View) {
+        val randomIntent = Intent(this, SecondActivity::class.java)
+        startActivity(randomIntent)
     }
 
 }

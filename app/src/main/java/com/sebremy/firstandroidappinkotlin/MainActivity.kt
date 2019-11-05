@@ -14,12 +14,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun toastMe(view : View) {
+    fun toastMe() {
         val myToast = Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT)
         myToast.show()
     }
 
-    fun countMe(view: View) {
+    fun countMe() {
 
         // Get the text view
         val showCountTextView = findViewById<TextView>(R.id.textView)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         showCountTextView.text = count.toString()
     }
 
-    fun randomMe(view: View) {
+    fun randomMe() {
         val randomIntent = Intent(this, SecondActivity::class.java)
 
         // Get the text view
